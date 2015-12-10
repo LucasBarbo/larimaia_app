@@ -5,7 +5,9 @@ import com.google.gson.GsonBuilder;
 
 import java.util.List;
 
+import br.ucdb.larimaiaapp.model.Cerimonial;
 import br.ucdb.larimaiaapp.model.Cliente;
+import br.ucdb.larimaiaapp.model.ItemPedido;
 import br.ucdb.larimaiaapp.model.Pedido;
 import br.ucdb.larimaiaapp.model.Produto;
 import br.ucdb.larimaiaapp.model.TipoEvento;
@@ -26,7 +28,7 @@ import retrofit.http.Path;
 public class ApiWeb {
 
     //SEMPRE ALTERAR NO CAMINHO O IP, COLOCAR O DA MÁQUINA AONDE ESTÁ O SERVIDOR WEB
-    public static final String BASE_URL = "http://192.168.25.3:8080/larimaiawebapi/ws";
+    public static final String BASE_URL = "http://192.168.0.104:8080/larimaiawebapi/ws";
 
 
     public static Rotas rotasApi;
@@ -89,11 +91,28 @@ public class ApiWeb {
 
         //Pedido
         @POST("/pedido/salvar")
-        public void salvarPedido(@Body Pedido pedido, Callback<Response> callback);
+        public void salvarPedido(@Body Pedido pedido, Callback<Pedido> callback);
         @GET("/pedido/editar/{id}")
         public void editarPedido(@Path("id") long id, Callback<Pedido> callback);
         @DELETE("/pedido/excluir/{id}")
         public void excluirPedido(@Path("id") long id, Callback<Response> callback);
 
+        //ItemPedido
+        @POST("/itempedido/salvar")
+        public void salvarItemPedido(@Body ItemPedido itemPedido, Callback<Response> callback);
+        @GET("/itempedido/editar/{id}")
+        public void editarItemPedido(@Path("id") long id, Callback<Pedido> callback);
+        @DELETE("/itempedido/excluir/{id}")
+        public void excluirItemPedido(@Path("id") long id, Callback<Response> callback);
+
+        //Cerimonial
+        @POST("/cerimonial/salvar")
+        public void salvarCerimonial(@Body Cerimonial cerimonial, Callback<Response> callback);
+        @GET("/cerimonial/editar/{id}")
+        public void editarCerimonial(@Path("id") long id, Callback<Cerimonial> callback);
+        @DELETE("/cerimonial/excluir/{id}")
+        public void excluirCerimonial (@Path("id") long id, Callback<Response> callback);
+        @GET("/cerimonial/listar")
+        public void listaCerimonial(Callback<List<Cerimonial>> callback);
     }
 }

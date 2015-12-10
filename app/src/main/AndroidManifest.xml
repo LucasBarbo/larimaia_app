@@ -24,6 +24,9 @@
             android:name=".activities.ActivityTipoEvento"
             android:label="@string/title_activity_cadastro_tipo_evento" >
         </activity>
+        <activity android:name=".activities.ActivityCerimonial"
+                  android:label="CadastroCerimonial">
+        </activity>
         <activity
             android:name=".activities.ActivityPedido"
             android:label="@string/title_activity_cadastro_pedido" >
@@ -41,6 +44,9 @@
         <activity
             android:name=".activities.ActivityConsultaTipoEvento"
             android:label="@string/title_activity_consulta_tipo_evento" >
+        </activity>
+        <activity android:name=".activities.ActivityConsultaCerimonial"
+                  android:label="ConsultaCliente">
         </activity>
 
         //Classe Main do Android

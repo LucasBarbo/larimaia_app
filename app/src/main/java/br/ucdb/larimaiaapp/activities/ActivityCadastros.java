@@ -35,6 +35,12 @@ public class ActivityCadastros extends AppCompatActivity{
         Intent irParaOpcao =  new Intent(this, ActivityTipoEvento.class);
         startActivity(irParaOpcao);
     }
+    @OnClick(R.id.btn_cerimonial)
+    public void cerimonial(){
+        Intent irParaOpcao =  new Intent(this, ActivityCerimonial.class);
+        startActivity(irParaOpcao);
+    }
+
     @OnClick(R.id.btn_pedido)
     public void pedido(){
         Intent irParaOpcao =  new Intent(this, ActivityPedido.class);

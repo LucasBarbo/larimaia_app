@@ -64,6 +64,13 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:text="Cerimonial"
+            android:id="@+id/btn_cerimonial"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:text="Pedido"
             android:id="@+id/btn_pedido"
             android:layout_gravity="center_horizontal" />
